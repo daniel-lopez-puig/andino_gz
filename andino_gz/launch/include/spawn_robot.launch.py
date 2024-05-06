@@ -5,14 +5,13 @@ import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
-from launch.conditions import IfCondition
 from launch.substitutions import LaunchConfiguration
-from launch.substitutions import PythonExpression
 from launch_ros.actions import Node
 from xacro import process_file
 
 PKG_ANDINO_DESCRIPTION = get_package_share_directory('andino_description')
 PKG_ANDINO_GZ = get_package_share_directory('andino_gz')
+
 
 def get_robot_description() -> str:
     """
@@ -78,7 +77,7 @@ def generate_launch_description():
     )
     robot_desc_argument = DeclareLaunchArgument(
         'robot_description_topic',
-        default_value='/robot_description',
+        default_value='robot_description',
         description='Robot description topic.',
     )
     rsp_frequency_argument = DeclareLaunchArgument(
@@ -104,6 +103,10 @@ def generate_launch_description():
                 'publish_frequency': rsp_frequency,
                 'robot_description': get_robot_description(),
             }
+        ],
+        remappings=[
+            ('/tf', 'tf'),
+            ('/tf_static', 'tf_static'),
         ],
     )
 
