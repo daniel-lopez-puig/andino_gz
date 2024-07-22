@@ -1,11 +1,11 @@
-# Andino Gazebo (Fortress) Simulation
+# Andino Gazebo Simulation
 
 
 <img src="./docs/media/andino_gz.png" width="800"/>
 
 ## :clipboard: Description
 
-This package provides a simulation environment for [Andino](https://github.com/Ekumen-OS/andino) in Gazebo Fortress using [ros_gz](https://github.com/gazebosim/ros_gz) to integrate it with ROS 2.
+This package provides a simulation environment for [Andino](https://github.com/Ekumen-OS/andino) in [Gazebo Fortress](https://gazebosim.org/home) relying on [ros_gz](https://github.com/gazebosim/ros_gz) to integrate it with ROS 2.
 
 ## :clamp: Platforms
 
@@ -69,9 +69,9 @@ To see a complete list of available arguments for the launch file do:
 Make sure to review the required topics using `ign topics` and `ros2 topic` CLI tools.
 Also, consider using looking at the translation entries under `andino_gz/config/bridge_config.yaml`.
 
-### Multi robot simulation
+### :robot::robot::robot: Multi robot simulation
 
-  This simulation also support multi robot simulation.
+  This simulation also supports multi-robot simulation.
 
   ```sh
   ros2 launch andino_gz andino_gz.launch.py robots:="
@@ -83,8 +83,8 @@ Also, consider using looking at the translation entries under `andino_gz/config/
        andino6={x: -0.8, y: 0.0, z: 0.1, yaw: 0.};"
   ```
 
-  _Note: You can add as many as you want_
-  _Note2: When running with Nav2(Using nav2:=True) start easy with 2 robots and see how it performs in your system before usingm more robots._
+  - _Note1: You can add as many Andino as you want._
+  - _Note2: If enabling Nav2(Using `nav2:=True`) try first with 2 robots and see how they perform in your system before using more robots._
 
   <img src="./docs/media/andino_gz_multi_robot.png" width="800"/>
 
@@ -92,22 +92,22 @@ Also, consider using looking at the translation entries under `andino_gz/config/
    - Start Gazebo simulator with a defined world (See '--world_name' flag)
    - Spawn as many robots as commanded.
    - Launch ros bridge for each robot.
-   - Launch rviz visualization for each robot.
+   - Launch Rviz visualization for each robot.
 
-  The simulation allows spawn as many robots as you want via the `--robots` flags.
-  For that you can pass the information of the robots in some sort of YAML format via ROS2 cli:
+  The simulation allows you to spawn as many robots as you want via the `--robots` flags.
+  For that, you can pass the information of the robots in some YAML format via ROS2 cli:
   ```yaml
     <robot_name>={x: 0.0, y: 0.0, yaw: 0.0, roll: 0.0, pitch: 0.0, yaw: 0.0};
   ```
 
-  Note: A ROS Namespace is pushed for each robot so all the topics and nodes are called the same with a difference of a `<robot_name>` prefix.
-  Note2: In order to RViz2 to work with the ROS namespace that is pushed, one has to make sure that no absolute topics are being used.
+  - _Note1: A ROS Namespace is pushed for each robot so all the topics and nodes are called the same with a difference of a `<robot_name>` prefix._
+  - _Note2: For RViz2 to work with the ROS namespace that is pushed, one has to ensure that no absolute topics are being used._
 
-### Navigation
+### :compass: Navigation
 
 <img src="./docs/media/andino_nav2.png" width="800"/>
 
-1. Run simulation and enable Nav2
+1. Run the simulation passing the `nav2` flag.
 
     ```sh
     ros2 launch andino_gz andino_gz.launch.py nav2:=True
@@ -133,7 +133,7 @@ Also, consider using looking at the translation entries under `andino_gz/config/
     <img src="./docs/media/andino_nav2_goal_pose.png" width="800"/>
 
 
-### SLAM
+### :world_map: SLAM
 
 <img src="./docs/media/andino_slam.png" width="800"/>
 
