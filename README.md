@@ -5,7 +5,7 @@
 
 ## :clipboard: Description
 
-This package provides a simulation environment for [Andino](https://github.com/Ekumen-OS/andino) in [Gazebo Fortress](https://gazebosim.org/home) relying on [ros_gz](https://github.com/gazebosim/ros_gz) to integrate it with ROS 2.
+This package provides a simulation environment for [Andino](https://github.com/Ekumen-OS/andino) in [Gazebo Harmonic](https://gazebosim.org/home) relying on [ros_gz](https://github.com/gazebosim/ros_gz) to integrate it with ROS 2.
 
 ## :clamp: Platforms
 
@@ -13,7 +13,7 @@ This package provides a simulation environment for [Andino](https://github.com/E
 - OS:
   - Ubuntu 22.04 Jammy Jellyfish
 - Gazebo:
-  - Fortress
+  - Harmonic
 
 ## :inbox_tray: Installation
 
@@ -66,7 +66,7 @@ To see a complete list of available arguments for the launch file do:
   ros2 launch andino_gz andino_gz.launch.py --show-args
   ```
 
-Make sure to review the required topics using `ign topics` and `ros2 topic` CLI tools.
+Make sure to review the required topics using `gz topic --list` and `ros2 topic` CLI tools.
 Also, consider using looking at the translation entries under `andino_gz/config/bridge_config.yaml`.
 
 ### :robot::robot::robot: Multi robot simulation
@@ -116,13 +116,13 @@ Also, consider using looking at the translation entries under `andino_gz/config/
     As before, you can launch as many robots as you want, for example launching two:
 
     ```sh
-    ros2 launch andino_gz andino_gz.launch.py nav2:=True robots:="andino1={x: 0.0, y: 0.0, z: 0.1, yaw: 0.};andino2={x: 1.0, y: 0.0, z: 0.1, yaw: 0.};" 
+    ros2 launch andino_gz andino_gz.launch.py nav2:=True robots:="andino1={x: 0.0, y: 0.0, z: 0.1, yaw: 0.};andino2={x: 1.0, y: 0.0, z: 0.1, yaw: 0.};"
     ```
 
     Once Gazebo window pops up, play the simulation using the gui.
 
 2. An RViz window will be spawned for each robot so it can be controlled independently. Use `2D Pose Estimate` to pass a hint to AMCL where is the initial point
-  
+
     Note you have to do it per robot, namely, per RViz window.
 
 
