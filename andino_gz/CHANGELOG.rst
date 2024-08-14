@@ -2,8 +2,8 @@
 Changelog for package andino_gz
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.0 (2024-08-14)
+------------------
 * Modifies min range of the lidar. (`#74 <https://github.com/Ekumen-OS/andino_gz/issues/74>`_)
 * Adds map to the office world. (`#69 <https://github.com/Ekumen-OS/andino_gz/issues/69>`_)
 * Setup Nav2 for multirobot simulation (`#66 <https://github.com/Ekumen-OS/andino_gz/issues/66>`_)
