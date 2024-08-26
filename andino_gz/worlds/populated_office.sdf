@@ -450,22 +450,22 @@
       <pose>9.73727 -6.8832 0 0 0 -1.65116</pose>
     </include>
     <include>
-      <uri>file:///home/franco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/fridge/2</uri>
+      <uri>https://fuel.gazebosim.org/openrobotics/models/fridge/2</uri>
       <name>Fridge</name>
       <pose>-6.55932 -7.36499 0 0 0 -3.11318</pose>
     </include>
     <include>
-      <uri>file:///home/franco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/table/4</uri>
+      <uri>https://fuel.gazebosim.org/openrobotics/models/table/4</uri>
       <name>Table_0</name>
       <pose>7.715 -5.01314 0 0 -0 1.58661</pose>
     </include>
     <include>
-      <uri>file:///home/franco/.ignition/fuel/fuel.gazebosim.org/makerspet/models/tv_65in/1</uri>
+      <uri>https://fuel.gazebosim.org/makerspet/models/tv_65in/1</uri>
       <name>tv_65in</name>
       <pose>7.73696 -7.65427 1.47068 0 0 -1.56595</pose>
     </include>
     <include>
-      <uri>file:///home/franco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/table/4</uri>
+      <uri>https://fuel.gazebosim.org/openrobotics/models/table/4</uri>
       <name>Table_0_1</name>
       <pose>7.73014 -6.24268 -0.013012 0 -0 1.58661</pose>
     </include>
