@@ -2,8 +2,8 @@
 Changelog for package andino_gz
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.1 (2024-08-27)
+------------------
 * Updates readme. (`#80 <https://github.com/Ekumen-OS/andino_gz/issues/80>`_)
 * Improve office world (`#75 <https://github.com/Ekumen-OS/andino_gz/issues/75>`_)
 * Fixes local_costmap and global_costmap scan topics. (`#79 <https://github.com/Ekumen-OS/andino_gz/issues/79>`_)
