@@ -2,6 +2,13 @@
 Changelog for package andino_gz
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Updates readme. (`#80 <https://github.com/Ekumen-OS/andino_gz/issues/80>`_)
+* Improve office world (`#75 <https://github.com/Ekumen-OS/andino_gz/issues/75>`_)
+* Fixes local_costmap and global_costmap scan topics. (`#79 <https://github.com/Ekumen-OS/andino_gz/issues/79>`_)
+* Contributors: Franco Cipollone, larodriguez22
+
 0.1.0 (2024-08-14)
 ------------------
 * Modifies min range of the lidar. (`#74 <https://github.com/Ekumen-OS/andino_gz/issues/74>`_)
